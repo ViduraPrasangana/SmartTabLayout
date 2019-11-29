@@ -1,42 +1,37 @@
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  >
-
-  <LinearLayout
-    android:id="@+id/header"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/primary"
-    >
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-      android:id="@id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:minHeight="?attr/actionBarSize"
-      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-      app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-      >
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:orientation="vertical">
 
-    </androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <FrameLayout
-      android:id="@id/tab"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      />
+        </androidx.appcompat.widget.Toolbar>
 
-  </LinearLayout>
+        <FrameLayout
+            android:id="@id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-  <androidx.viewpager.widget.ViewPager
-    android:id="@id/viewpager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@id/header"
-    />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:background="@color/primary" />
 
 </RelativeLayout>

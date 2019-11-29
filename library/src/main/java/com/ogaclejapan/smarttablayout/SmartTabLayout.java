@@ -86,6 +86,7 @@ public class SmartTabLayout extends HorizontalScrollView {
   private InternalTabClickListener internalTabClickListener;
   private OnTabClickListener onTabClickListener;
   private boolean distributeEvenly;
+  private boolean selectableBackground= false;
 
   public SmartTabLayout(Context context) {
     this(context, null);
@@ -356,9 +357,10 @@ public class SmartTabLayout extends HorizontalScrollView {
 
     if (tabViewBackgroundResId != NO_ID) {
       textView.setBackgroundResource(tabViewBackgroundResId);
-    } else {
+    } else if(selectableBackground){
       // If we're running on Honeycomb or newer, then we can use the Theme's
       // selectableItemBackground to ensure that the View has a pressed state
+
       TypedValue outValue = new TypedValue();
       getContext().getTheme().resolveAttribute(android.R.attr.selectableItemBackground,
           outValue, true);

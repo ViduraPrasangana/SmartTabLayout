@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion COMPILE_SDK_VERSION as int
+    compileSdkVersion = COMPILE_SDK_VERSION as int
 
-  defaultConfig {
+    defaultConfig {
     minSdkVersion 14
     targetSdkVersion COMPILE_SDK_VERSION as int
     versionCode VERSION_CODE as int
